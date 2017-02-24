@@ -18,7 +18,7 @@ foreach ($_SERVER as $key => $value) {
     $pass_tiki = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
-$link = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname);
+$link = mysqli_connect($host_tiki, $user_tiki, $pass_tiki, $dbs_tiki);
 
 if (!$link) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
